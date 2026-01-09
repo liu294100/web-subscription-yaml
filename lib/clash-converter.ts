@@ -17,7 +17,8 @@ export async function fetchAndConvertClash(subscriptionUrl: string, services: St
   // 获取原始订阅
   const response = await fetch(subscriptionUrl, {
     headers: {
-      "User-Agent": "clash-verge/1.0",
+      "User-Agent": "ClashforWindows/0.20.39",
+      "Accept": "*/*",
     },
   })
 
@@ -26,7 +27,10 @@ export async function fetchAndConvertClash(subscriptionUrl: string, services: St
   }
 
   const originalYaml = await response.text()
+  return convertClashYaml(originalYaml, services)
+}
 
+export function convertClashYaml(originalYaml: string, services: StreamingService[]): string {
   // 解析 YAML
   let config: ClashConfig
   try {
