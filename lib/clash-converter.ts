@@ -17,7 +17,7 @@ export async function fetchAndConvertClash(subscriptionUrl: string, services: St
   // 获取原始订阅
   const response = await fetch(subscriptionUrl, {
     headers: {
-      "User-Agent": "ClashforWindows/0.20.39",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "Accept": "*/*",
     },
   })
