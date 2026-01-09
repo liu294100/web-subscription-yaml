@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web-subscription-converter:
+    container_name: web-subscription-converter
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PASSWORD=${PASSWORD:-} # Optional: Set a password for access
