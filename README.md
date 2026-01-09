@@ -2,7 +2,7 @@
 
 A modern web tool designed to easily add streaming routing rules to your Clash subscription links.
 
-[中文文档](README.zh-CN.md) | [日本語ドキュメント](README.ja.md)
+[中文](README.zh-CN.md) | [日本語](README.ja.md)
 
 ![Project Preview](public/placeholder-logo.png)
 
