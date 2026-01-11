@@ -10,10 +10,32 @@ rule-providers:
 proxy-groups:
 - name: 🎵 SpotifyRule
   type: select
-  proxies: []
+  proxies:
+  - "\U0001F530 手动选择"
+  - ♻️ 自动选择
+  - "\U0001F3AF Direct"
+  - 香港 A01
+  - 香港 A02
+  - 香港 A03
+  - 香港 A04
+  - 香港 A05
+  - 香港 A06
+  - 香港 A07
+  - 香港 A08
+  - 香港 A09
+  - 香港 A10
+  - 香港 A11
+  - 香港 A12
+  - 香港 A13
+  - 香港 A14
+  - 香港 A15
+  - 香港 A16
+  - 香港 A17
+  - 香港 A18
+  - 香港 A19
+  - 香港 A20
   include-all-proxies: true
-  # 默认筛选包含“Spotify”或“US”等关键词的节点，如果想选所有节点，可以用 .*
-  # 为了防止没有节点，这里使用 .* 匹配所有节点
+  # 匹配所有节点，确保像参考配置那样包含各国节点
   filter: .*
 
 rules:
