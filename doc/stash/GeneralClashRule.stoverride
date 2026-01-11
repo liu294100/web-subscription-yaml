@@ -1,0 +1,579 @@
+name: GeneralClashRule Override
+desc: Generated from GeneralClashRule.ini
+rule-providers:
+  GitHub_83eff429:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    path: ./ruleset/GitHub_83eff429.yaml
+    interval: 86400
+  国内流量_ea90bf74:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Inside.list
+    path: ./ruleset/国内流量_ea90bf74.yaml
+    interval: 86400
+  国内流量_a4cf81df:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+    path: ./ruleset/国内流量_a4cf81df.yaml
+    interval: 86400
+  国外流量_961f3387:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Outside.list
+    path: ./ruleset/国外流量_961f3387.yaml
+    interval: 86400
+  AI_cbb82e83:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/ChatGPT.list
+    path: ./ruleset/AI_cbb82e83.yaml
+    interval: 86400
+  AI_bfb8dc1c:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/AI_bfb8dc1c.yaml
+    interval: 86400
+  AI_afa37373:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
+    path: ./ruleset/AI_afa37373.yaml
+    interval: 86400
+  AI_3d248e0d:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+    path: ./ruleset/AI_3d248e0d.yaml
+    interval: 86400
+  AI_3518ebfd:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
+    path: ./ruleset/AI_3518ebfd.yaml
+    interval: 86400
+  AI_6df25f35:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Perplexity.list
+    path: ./ruleset/AI_6df25f35.yaml
+    interval: 86400
+  AI_2cf1aeb3:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Grok.list
+    path: ./ruleset/AI_2cf1aeb3.yaml
+    interval: 86400
+  国内流量_0311de39:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
+    path: ./ruleset/国内流量_0311de39.yaml
+    interval: 86400
+  国内流量_94fa7046:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    path: ./ruleset/国内流量_94fa7046.yaml
+    interval: 86400
+  国外流量_8faaa622:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml
+    path: ./ruleset/国外流量_8faaa622.yaml
+    interval: 86400
+  IP归属地伪装_ac92b598:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/rule-provider.yaml
+    path: ./ruleset/IP归属地伪装_ac92b598.yaml
+    interval: 86400
+  广告拦截_c4b5b268:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ZhihuAds/ZhihuAds.yaml
+    path: ./ruleset/广告拦截_c4b5b268.yaml
+    interval: 86400
+  YouTube_d68397cd:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    path: ./ruleset/YouTube_d68397cd.yaml
+    interval: 86400
+  Netflix_e11a0c01:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    path: ./ruleset/Netflix_e11a0c01.yaml
+    interval: 86400
+  DisneyPlus_b67900b6:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+    path: ./ruleset/DisneyPlus_b67900b6.yaml
+    interval: 86400
+  PrimeVideo_99aaa73c:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AmazonPrimeVideo/AmazonPrimeVideo.yaml
+    path: ./ruleset/PrimeVideo_99aaa73c.yaml
+    interval: 86400
+  HBO_4179041e:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.yaml
+    path: ./ruleset/HBO_4179041e.yaml
+    interval: 86400
+  HBO_6d32d315:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOAsia/HBOAsia.yaml
+    path: ./ruleset/HBO_6d32d315.yaml
+    interval: 86400
+  HBO_f48a25b9:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOUSA/HBOUSA.yaml
+    path: ./ruleset/HBO_f48a25b9.yaml
+    interval: 86400
+  AppleTV_b7df0f01:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
+    path: ./ruleset/AppleTV_b7df0f01.yaml
+    interval: 86400
+  EMBY_8b9684c1:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Emby.yaml
+    path: ./ruleset/EMBY_8b9684c1.yaml
+    interval: 86400
+  EMBY_230908bf:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml
+    path: ./ruleset/EMBY_230908bf.yaml
+    interval: 86400
+  巴哈姆特_4b2acf00:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml
+    path: ./ruleset/巴哈姆特_4b2acf00.yaml
+    interval: 86400
+  Bilibili_e82ea235:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
+    path: ./ruleset/Bilibili_e82ea235.yaml
+    interval: 86400
+  Bilibili_9c51f198:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
+    path: ./ruleset/Bilibili_9c51f198.yaml
+    interval: 86400
+  Spotify_977a1447:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    path: ./ruleset/Spotify_977a1447.yaml
+    interval: 86400
+  TikTok_d40bac18:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+    path: ./ruleset/TikTok_d40bac18.yaml
+    interval: 86400
+  国外媒体_3c471c17:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
+    path: ./ruleset/国外媒体_3c471c17.yaml
+    interval: 86400
+  国内媒体_6cc7e7ae:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    path: ./ruleset/国内媒体_6cc7e7ae.yaml
+    interval: 86400
+  谷歌FCM_90a97b9c:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+    path: ./ruleset/谷歌FCM_90a97b9c.yaml
+    interval: 86400
+  国内流量_6dafa240:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./ruleset/国内流量_6dafa240.yaml
+    interval: 86400
+  微软云盘_695b3599:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+    path: ./ruleset/微软云盘_695b3599.yaml
+    interval: 86400
+  微软服务_0c0813f8:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    path: ./ruleset/微软服务_0c0813f8.yaml
+    interval: 86400
+  苹果服务_1c3d5194:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    path: ./ruleset/苹果服务_1c3d5194.yaml
+    interval: 86400
+  Telegram_9df6d7e4:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    path: ./ruleset/Telegram_9df6d7e4.yaml
+    interval: 86400
+  Discord_37bd8247:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml
+    path: ./ruleset/Discord_37bd8247.yaml
+    interval: 86400
+  游戏平台_4322d284:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+    path: ./ruleset/游戏平台_4322d284.yaml
+    interval: 86400
+  国外流量_12e4eb80:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+    path: ./ruleset/国外流量_12e4eb80.yaml
+    interval: 86400
+  国内流量_c4b8c99f:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./ruleset/国内流量_c4b8c99f.yaml
+    interval: 86400
+  国内流量_e89aec92:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./ruleset/国内流量_e89aec92.yaml
+    interval: 86400
+  国内流量_218f37af:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+    path: ./ruleset/国内流量_218f37af.yaml
+    interval: 86400
+proxy-groups:
+- name: 🚀 国外流量
+  type: select
+  proxies:
+  - ♻️ 自动选择
+  - 🔯 故障转移
+  - 🔮 负载均衡
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: ✈️ 手动选择
+  type: select
+  proxies: []
+  include-all-proxies: true
+  filter: .*
+- name: 🛩️ 手动选择备用
+  type: select
+  proxies: []
+  include-all-proxies: true
+  filter: .*
+- name: 🚁 自建节点
+  type: select
+  proxies: []
+  include-all-proxies: true
+  filter: (自建|Craig|hk-vmess|HY|海晏河清|backup|_)
+- name: 🎯 国内流量
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (电信|联通|移动)
+- name: 🛸 IP归属地伪装
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (CN|电信|联通|移动)
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🧚 AI
+  type: select
+  proxies:
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 📹 YouTube
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (阿根廷|AR)
+- name: 🎥 Netflix
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (港|HK|Hong Kong)
+- name: 🐹 DisneyPlus
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (港|HK|Hong Kong)
+- name: 📽️ PrimeVideo
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🎦 HBO
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (台|新北|彰化|TW|Taiwan)
+- name: 🎬 EMBY
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (Emby|emby)
+- name: 🍎 AppleTV
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 📺 巴哈姆特
+  type: select
+  proxies:
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (台|TW|Taiwan|港|HK|Hong Kong)
+- name: 📺 Bilibili
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (台|TW|Taiwan)
+- name: 🎵 Spotify
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+  include-all-proxies: true
+  filter: (尼日利亚|NG)
+- name: 🎶 TikTok
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🌏 国内媒体
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 📲 Telegram
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🤖 Discord
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 👨‍💻 GitHub
+  type: select
+  proxies:
+  - 🚀 国外流量
+  - 🎯 国内流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 📢 谷歌FCM
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: Ⓜ️ 微软云盘
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🎮 游戏平台
+  type: select
+  proxies:
+  - 🎯 国内流量
+  - 🚀 国外流量
+  - ✈️ 手动选择
+  - 🛩️ 手动选择备用
+  - 🚁 自建节点
+- name: 🛑 广告拦截
+  type: select
+  proxies:
+  - REJECT
+  - 🎯 国内流量
+  - 🚀 国外流量
+- name: ♻️ 自动选择
+  type: url-test
+  proxies: []
+  include-all-proxies: true
+  filter: (^(?!.*(电信|联通|移动)).*)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: 🔯 故障转移
+  type: fallback
+  proxies: []
+  include-all-proxies: true
+  filter: (^(?!.*(电信|联通|移动)).*)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: 🔮 负载均衡
+  type: load-balance
+  proxies: []
+  include-all-proxies: true
+  filter: (^(?!.*(电信|联通|移动)).*)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+rules:
+- RULE-SET,GitHub_83eff429,👨‍💻 GitHub
+- RULE-SET,国内流量_ea90bf74,🎯 国内流量
+- RULE-SET,国内流量_a4cf81df,🎯 国内流量
+- RULE-SET,国外流量_961f3387,🚀 国外流量
+- RULE-SET,AI_cbb82e83,🧚 AI
+- RULE-SET,AI_bfb8dc1c,🧚 AI
+- RULE-SET,AI_afa37373,🧚 AI
+- RULE-SET,AI_3d248e0d,🧚 AI
+- RULE-SET,AI_3518ebfd,🧚 AI
+- RULE-SET,AI_6df25f35,🧚 AI
+- RULE-SET,AI_2cf1aeb3,🧚 AI
+- RULE-SET,国内流量_0311de39,🎯 国内流量
+- RULE-SET,国内流量_94fa7046,🎯 国内流量
+- RULE-SET,国外流量_8faaa622,🚀 国外流量
+- RULE-SET,IP归属地伪装_ac92b598,🛸 IP归属地伪装
+- RULE-SET,广告拦截_c4b5b268,🛑 广告拦截
+- RULE-SET,YouTube_d68397cd,📹 YouTube
+- RULE-SET,Netflix_e11a0c01,🎥 Netflix
+- RULE-SET,DisneyPlus_b67900b6,🐹 DisneyPlus
+- RULE-SET,PrimeVideo_99aaa73c,📽️ PrimeVideo
+- RULE-SET,HBO_4179041e,🎦 HBO
+- RULE-SET,HBO_6d32d315,🎦 HBO
+- RULE-SET,HBO_f48a25b9,🎦 HBO
+- RULE-SET,AppleTV_b7df0f01,🍎 AppleTV
+- RULE-SET,EMBY_8b9684c1,🎬 EMBY
+- RULE-SET,EMBY_230908bf,🎬 EMBY
+- RULE-SET,巴哈姆特_4b2acf00,📺 巴哈姆特
+- RULE-SET,Bilibili_e82ea235,📺 Bilibili
+- RULE-SET,Bilibili_9c51f198,📺 Bilibili
+- RULE-SET,Spotify_977a1447,🎵 Spotify
+- RULE-SET,TikTok_d40bac18,🎶 TikTok
+- RULE-SET,国外媒体_3c471c17,🌍 国外媒体
+- RULE-SET,国内媒体_6cc7e7ae,🌏 国内媒体
+- RULE-SET,谷歌FCM_90a97b9c,📢 谷歌FCM
+- RULE-SET,国内流量_6dafa240,🎯 国内流量
+- RULE-SET,微软云盘_695b3599,Ⓜ️ 微软云盘
+- RULE-SET,微软服务_0c0813f8,Ⓜ️ 微软服务
+- RULE-SET,苹果服务_1c3d5194,🍎 苹果服务
+- RULE-SET,Telegram_9df6d7e4,📲 Telegram
+- RULE-SET,Discord_37bd8247,🤖 Discord
+- RULE-SET,游戏平台_4322d284,🎮 游戏平台
+- RULE-SET,国外流量_12e4eb80,🚀 国外流量
+- RULE-SET,国内流量_c4b8c99f,🎯 国内流量
+- RULE-SET,国内流量_e89aec92,🎯 国内流量
+- RULE-SET,国内流量_218f37af,🎯 国内流量
+- GEOIP,CN,🎯 国内流量
+- MATCH,🐟 漏网之鱼
