@@ -5,272 +5,241 @@ rule-providers:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
-    path: ./ruleset/GitHub_83eff429.yaml
     interval: 86400
   国内流量_ea90bf74:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Inside.list
-    path: ./ruleset/国内流量_ea90bf74.yaml
     interval: 86400
+    format: text
   国内流量_a4cf81df:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
-    path: ./ruleset/国内流量_a4cf81df.yaml
     interval: 86400
   国外流量_961f3387:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Outside.list
-    path: ./ruleset/国外流量_961f3387.yaml
     interval: 86400
+    format: text
   AI_cbb82e83:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/ChatGPT.list
-    path: ./ruleset/AI_cbb82e83.yaml
     interval: 86400
+    format: text
   AI_bfb8dc1c:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
-    path: ./ruleset/AI_bfb8dc1c.yaml
     interval: 86400
   AI_afa37373:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
-    path: ./ruleset/AI_afa37373.yaml
     interval: 86400
   AI_3d248e0d:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
-    path: ./ruleset/AI_3d248e0d.yaml
     interval: 86400
   AI_3518ebfd:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml
-    path: ./ruleset/AI_3518ebfd.yaml
     interval: 86400
   AI_6df25f35:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Perplexity.list
-    path: ./ruleset/AI_6df25f35.yaml
     interval: 86400
+    format: text
   AI_2cf1aeb3:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Grok.list
-    path: ./ruleset/AI_2cf1aeb3.yaml
     interval: 86400
+    format: text
   国内流量_0311de39:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
-    path: ./ruleset/国内流量_0311de39.yaml
     interval: 86400
   国内流量_94fa7046:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
-    path: ./ruleset/国内流量_94fa7046.yaml
     interval: 86400
+    format: text
   国外流量_8faaa622:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PikPak/PikPak.yaml
-    path: ./ruleset/国外流量_8faaa622.yaml
     interval: 86400
   IP归属地伪装_ac92b598:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/rule-provider.yaml
-    path: ./ruleset/IP归属地伪装_ac92b598.yaml
     interval: 86400
   广告拦截_c4b5b268:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ZhihuAds/ZhihuAds.yaml
-    path: ./ruleset/广告拦截_c4b5b268.yaml
     interval: 86400
   YouTube_d68397cd:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
-    path: ./ruleset/YouTube_d68397cd.yaml
     interval: 86400
   Netflix_e11a0c01:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
-    path: ./ruleset/Netflix_e11a0c01.yaml
     interval: 86400
   DisneyPlus_b67900b6:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
-    path: ./ruleset/DisneyPlus_b67900b6.yaml
     interval: 86400
   PrimeVideo_99aaa73c:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AmazonPrimeVideo/AmazonPrimeVideo.yaml
-    path: ./ruleset/PrimeVideo_99aaa73c.yaml
     interval: 86400
   HBO_4179041e:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.yaml
-    path: ./ruleset/HBO_4179041e.yaml
     interval: 86400
   HBO_6d32d315:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOAsia/HBOAsia.yaml
-    path: ./ruleset/HBO_6d32d315.yaml
     interval: 86400
   HBO_f48a25b9:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOUSA/HBOUSA.yaml
-    path: ./ruleset/HBO_f48a25b9.yaml
     interval: 86400
   AppleTV_b7df0f01:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
-    path: ./ruleset/AppleTV_b7df0f01.yaml
     interval: 86400
   EMBY_8b9684c1:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/cutethotw/ClashRule/main/Rule/Emby.yaml
-    path: ./ruleset/EMBY_8b9684c1.yaml
     interval: 86400
   EMBY_230908bf:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml
-    path: ./ruleset/EMBY_230908bf.yaml
     interval: 86400
   巴哈姆特_4b2acf00:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml
-    path: ./ruleset/巴哈姆特_4b2acf00.yaml
     interval: 86400
   Bilibili_e82ea235:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list
-    path: ./ruleset/Bilibili_e82ea235.yaml
     interval: 86400
+    format: text
   Bilibili_9c51f198:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list
-    path: ./ruleset/Bilibili_9c51f198.yaml
     interval: 86400
+    format: text
   Spotify_977a1447:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
-    path: ./ruleset/Spotify_977a1447.yaml
     interval: 86400
   TikTok_d40bac18:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
-    path: ./ruleset/TikTok_d40bac18.yaml
     interval: 86400
   国外媒体_3c471c17:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml
-    path: ./ruleset/国外媒体_3c471c17.yaml
     interval: 86400
   国内媒体_6cc7e7ae:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
-    path: ./ruleset/国内媒体_6cc7e7ae.yaml
     interval: 86400
   谷歌FCM_90a97b9c:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
-    path: ./ruleset/谷歌FCM_90a97b9c.yaml
     interval: 86400
+    format: text
   国内流量_6dafa240:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./ruleset/国内流量_6dafa240.yaml
     interval: 86400
+    format: text
   微软云盘_695b3599:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
-    path: ./ruleset/微软云盘_695b3599.yaml
     interval: 86400
   微软服务_0c0813f8:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
-    path: ./ruleset/微软服务_0c0813f8.yaml
     interval: 86400
   苹果服务_1c3d5194:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
-    path: ./ruleset/苹果服务_1c3d5194.yaml
     interval: 86400
   Telegram_9df6d7e4:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
-    path: ./ruleset/Telegram_9df6d7e4.yaml
     interval: 86400
   Discord_37bd8247:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml
-    path: ./ruleset/Discord_37bd8247.yaml
     interval: 86400
   游戏平台_4322d284:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
-    path: ./ruleset/游戏平台_4322d284.yaml
     interval: 86400
   国外流量_12e4eb80:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
-    path: ./ruleset/国外流量_12e4eb80.yaml
     interval: 86400
+    format: text
   国内流量_c4b8c99f:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./ruleset/国内流量_c4b8c99f.yaml
     interval: 86400
+    format: text
   国内流量_e89aec92:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./ruleset/国内流量_e89aec92.yaml
     interval: 86400
+    format: text
   国内流量_218f37af:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
-    path: ./ruleset/国内流量_218f37af.yaml
     interval: 86400
+    format: text
 proxy-groups:
 - name: 🚀 国外流量
   type: select
