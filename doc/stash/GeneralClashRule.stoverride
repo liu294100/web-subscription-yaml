@@ -250,6 +250,8 @@ proxy-groups:
   - ✈️ 手动选择 NEW
   - 🛩️ 手动选择备用 NEW
   - 🚁 自建节点 NEW
+  include-all-proxies: true
+  filter: (^(?!.*(电信|联通|移动|Website)).*)
 - name: ✈️ 手动选择 NEW
   type: select
   proxies: []
@@ -292,6 +294,8 @@ proxy-groups:
   - ✈️ 手动选择 NEW
   - 🛩️ 手动选择备用 NEW
   - 🚁 自建节点 NEW
+  include-all-proxies: true
+  filter: .*
 - name: 🧚 AI NEW
   type: select
   proxies:
