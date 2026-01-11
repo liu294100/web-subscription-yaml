@@ -241,257 +241,257 @@ rule-providers:
     interval: 86400
     format: text
 proxy-groups:
-- name: 🚀 国外流量
+- name: 🚀 国外流量 NEW
   type: select
   proxies:
-  - ♻️ 自动选择
-  - 🔯 故障转移
-  - 🔮 负载均衡
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: ✈️ 手动选择
+  - ♻️ 自动选择 NEW
+  - 🔯 故障转移 NEW
+  - 🔮 负载均衡 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: ✈️ 手动选择 NEW
   type: select
   proxies: []
   include-all-proxies: true
   filter: .*
-- name: 🛩️ 手动选择备用
+- name: 🛩️ 手动选择备用 NEW
   type: select
   proxies: []
   include-all-proxies: true
   filter: .*
-- name: 🚁 自建节点
+- name: 🚁 自建节点 NEW
   type: select
   proxies: []
   include-all-proxies: true
   filter: (自建|Craig|hk-vmess|HY|海晏河清|backup|_)
-- name: 🎯 国内流量
+- name: 🎯 国内流量 NEW
   type: select
   proxies:
   - DIRECT
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (电信|联通|移动)
-- name: 🛸 IP归属地伪装
+- name: 🛸 IP归属地伪装 NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (CN|电信|联通|移动)
-- name: 🐟 漏网之鱼
+- name: 🐟 漏网之鱼 NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🧚 AI
+  - 🚀 国外流量 NEW
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🧚 AI NEW
   type: select
   proxies:
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 📹 YouTube
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 📹 YouTube NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (阿根廷|AR)
-- name: 🎥 Netflix
+- name: 🎥 Netflix NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (港|HK|Hong Kong)
-- name: 🐹 DisneyPlus
+- name: 🐹 DisneyPlus NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (港|HK|Hong Kong)
-- name: 📽️ PrimeVideo
+- name: 📽️ PrimeVideo NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🎦 HBO
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🎦 HBO NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (台|新北|彰化|TW|Taiwan)
-- name: 🎬 EMBY
+- name: 🎬 EMBY NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🚀 国外流量 NEW
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (Emby|emby)
-- name: 🍎 AppleTV
+- name: 🍎 AppleTV NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 📺 巴哈姆特
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 📺 巴哈姆特 NEW
   type: select
   proxies:
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (台|TW|Taiwan|港|HK|Hong Kong)
-- name: 📺 Bilibili
+- name: 📺 Bilibili NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (台|TW|Taiwan)
-- name: 🎵 Spotify
+- name: 🎵 Spotify NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
   include-all-proxies: true
   filter: (尼日利亚|NG)
-- name: 🎶 TikTok
+- name: 🎶 TikTok NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🌍 国外媒体
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🌍 国外媒体 NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🌏 国内媒体
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🌏 国内媒体 NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 📲 Telegram
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 📲 Telegram NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🤖 Discord
+  - 🚀 国外流量 NEW
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🤖 Discord NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 👨‍💻 GitHub
+  - 🚀 国外流量 NEW
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 👨‍💻 GitHub NEW
   type: select
   proxies:
-  - 🚀 国外流量
-  - 🎯 国内流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 📢 谷歌FCM
+  - 🚀 国外流量 NEW
+  - 🎯 国内流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 📢 谷歌FCM NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: Ⓜ️ 微软云盘
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: Ⓜ️ 微软云盘 NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: Ⓜ️ 微软服务
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: Ⓜ️ 微软服务 NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🍎 苹果服务
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🍎 苹果服务 NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🎮 游戏平台
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🎮 游戏平台 NEW
   type: select
   proxies:
-  - 🎯 国内流量
-  - 🚀 国外流量
-  - ✈️ 手动选择
-  - 🛩️ 手动选择备用
-  - 🚁 自建节点
-- name: 🛑 广告拦截
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+  - ✈️ 手动选择 NEW
+  - 🛩️ 手动选择备用 NEW
+  - 🚁 自建节点 NEW
+- name: 🛑 广告拦截 NEW
   type: select
   proxies:
   - REJECT
-  - 🎯 国内流量
-  - 🚀 国外流量
-- name: ♻️ 自动选择
+  - 🎯 国内流量 NEW
+  - 🚀 国外流量 NEW
+- name: ♻️ 自动选择 NEW
   type: url-test
   proxies: []
   include-all-proxies: true
   filter: (^(?!.*(电信|联通|移动)).*)
   url: http://www.gstatic.com/generate_204
   interval: 300
-- name: 🔯 故障转移
+- name: 🔯 故障转移 NEW
   type: fallback
   proxies: []
   include-all-proxies: true
   filter: (^(?!.*(电信|联通|移动)).*)
   url: http://www.gstatic.com/generate_204
   interval: 300
-- name: 🔮 负载均衡
+- name: 🔮 负载均衡 NEW
   type: load-balance
   proxies: []
   include-all-proxies: true
@@ -499,50 +499,50 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
 rules:
-- RULE-SET,GitHub_83eff429,👨‍💻 GitHub
-- RULE-SET,国内流量_ea90bf74,🎯 国内流量
-- RULE-SET,国内流量_a4cf81df,🎯 国内流量
-- RULE-SET,国外流量_961f3387,🚀 国外流量
-- RULE-SET,AI_cbb82e83,🧚 AI
-- RULE-SET,AI_bfb8dc1c,🧚 AI
-- RULE-SET,AI_afa37373,🧚 AI
-- RULE-SET,AI_3d248e0d,🧚 AI
-- RULE-SET,AI_3518ebfd,🧚 AI
-- RULE-SET,AI_6df25f35,🧚 AI
-- RULE-SET,AI_2cf1aeb3,🧚 AI
-- RULE-SET,国内流量_0311de39,🎯 国内流量
-- RULE-SET,国内流量_94fa7046,🎯 国内流量
-- RULE-SET,国外流量_8faaa622,🚀 国外流量
-- RULE-SET,IP归属地伪装_ac92b598,🛸 IP归属地伪装
-- RULE-SET,广告拦截_c4b5b268,🛑 广告拦截
-- RULE-SET,YouTube_d68397cd,📹 YouTube
-- RULE-SET,Netflix_e11a0c01,🎥 Netflix
-- RULE-SET,DisneyPlus_b67900b6,🐹 DisneyPlus
-- RULE-SET,PrimeVideo_99aaa73c,📽️ PrimeVideo
-- RULE-SET,HBO_4179041e,🎦 HBO
-- RULE-SET,HBO_6d32d315,🎦 HBO
-- RULE-SET,HBO_f48a25b9,🎦 HBO
-- RULE-SET,AppleTV_b7df0f01,🍎 AppleTV
-- RULE-SET,EMBY_8b9684c1,🎬 EMBY
-- RULE-SET,EMBY_230908bf,🎬 EMBY
-- RULE-SET,巴哈姆特_4b2acf00,📺 巴哈姆特
-- RULE-SET,Bilibili_e82ea235,📺 Bilibili
-- RULE-SET,Bilibili_9c51f198,📺 Bilibili
-- RULE-SET,Spotify_977a1447,🎵 Spotify
-- RULE-SET,TikTok_d40bac18,🎶 TikTok
-- RULE-SET,国外媒体_3c471c17,🌍 国外媒体
-- RULE-SET,国内媒体_6cc7e7ae,🌏 国内媒体
-- RULE-SET,谷歌FCM_90a97b9c,📢 谷歌FCM
-- RULE-SET,国内流量_6dafa240,🎯 国内流量
-- RULE-SET,微软云盘_695b3599,Ⓜ️ 微软云盘
-- RULE-SET,微软服务_0c0813f8,Ⓜ️ 微软服务
-- RULE-SET,苹果服务_1c3d5194,🍎 苹果服务
-- RULE-SET,Telegram_9df6d7e4,📲 Telegram
-- RULE-SET,Discord_37bd8247,🤖 Discord
-- RULE-SET,游戏平台_4322d284,🎮 游戏平台
-- RULE-SET,国外流量_12e4eb80,🚀 国外流量
-- RULE-SET,国内流量_c4b8c99f,🎯 国内流量
-- RULE-SET,国内流量_e89aec92,🎯 国内流量
-- RULE-SET,国内流量_218f37af,🎯 国内流量
-- GEOIP,CN,🎯 国内流量
-- MATCH,🐟 漏网之鱼
+- RULE-SET,GitHub_83eff429,👨‍💻 GitHub NEW
+- RULE-SET,国内流量_ea90bf74,🎯 国内流量 NEW
+- RULE-SET,国内流量_a4cf81df,🎯 国内流量 NEW
+- RULE-SET,国外流量_961f3387,🚀 国外流量 NEW
+- RULE-SET,AI_cbb82e83,🧚 AI NEW
+- RULE-SET,AI_bfb8dc1c,🧚 AI NEW
+- RULE-SET,AI_afa37373,🧚 AI NEW
+- RULE-SET,AI_3d248e0d,🧚 AI NEW
+- RULE-SET,AI_3518ebfd,🧚 AI NEW
+- RULE-SET,AI_6df25f35,🧚 AI NEW
+- RULE-SET,AI_2cf1aeb3,🧚 AI NEW
+- RULE-SET,国内流量_0311de39,🎯 国内流量 NEW
+- RULE-SET,国内流量_94fa7046,🎯 国内流量 NEW
+- RULE-SET,国外流量_8faaa622,🚀 国外流量 NEW
+- RULE-SET,IP归属地伪装_ac92b598,🛸 IP归属地伪装 NEW
+- RULE-SET,广告拦截_c4b5b268,🛑 广告拦截 NEW
+- RULE-SET,YouTube_d68397cd,📹 YouTube NEW
+- RULE-SET,Netflix_e11a0c01,🎥 Netflix NEW
+- RULE-SET,DisneyPlus_b67900b6,🐹 DisneyPlus NEW
+- RULE-SET,PrimeVideo_99aaa73c,📽️ PrimeVideo NEW
+- RULE-SET,HBO_4179041e,🎦 HBO NEW
+- RULE-SET,HBO_6d32d315,🎦 HBO NEW
+- RULE-SET,HBO_f48a25b9,🎦 HBO NEW
+- RULE-SET,AppleTV_b7df0f01,🍎 AppleTV NEW
+- RULE-SET,EMBY_8b9684c1,🎬 EMBY NEW
+- RULE-SET,EMBY_230908bf,🎬 EMBY NEW
+- RULE-SET,巴哈姆特_4b2acf00,📺 巴哈姆特 NEW
+- RULE-SET,Bilibili_e82ea235,📺 Bilibili NEW
+- RULE-SET,Bilibili_9c51f198,📺 Bilibili NEW
+- RULE-SET,Spotify_977a1447,🎵 Spotify NEW
+- RULE-SET,TikTok_d40bac18,🎶 TikTok NEW
+- RULE-SET,国外媒体_3c471c17,🌍 国外媒体 NEW
+- RULE-SET,国内媒体_6cc7e7ae,🌏 国内媒体 NEW
+- RULE-SET,谷歌FCM_90a97b9c,📢 谷歌FCM NEW
+- RULE-SET,国内流量_6dafa240,🎯 国内流量 NEW
+- RULE-SET,微软云盘_695b3599,Ⓜ️ 微软云盘 NEW
+- RULE-SET,微软服务_0c0813f8,Ⓜ️ 微软服务 NEW
+- RULE-SET,苹果服务_1c3d5194,🍎 苹果服务 NEW
+- RULE-SET,Telegram_9df6d7e4,📲 Telegram NEW
+- RULE-SET,Discord_37bd8247,🤖 Discord NEW
+- RULE-SET,游戏平台_4322d284,🎮 游戏平台 NEW
+- RULE-SET,国外流量_12e4eb80,🚀 国外流量 NEW
+- RULE-SET,国内流量_c4b8c99f,🎯 国内流量 NEW
+- RULE-SET,国内流量_e89aec92,🎯 国内流量 NEW
+- RULE-SET,国内流量_218f37af,🎯 国内流量 NEW
+- GEOIP,CN,🎯 国内流量 NEW
+- MATCH,🐟 漏网之鱼 NEW
