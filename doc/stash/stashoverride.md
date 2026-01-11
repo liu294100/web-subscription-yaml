@@ -6,6 +6,8 @@
 
 样例：https://raw.githubusercontent.com/liu294100/web-subscription-yaml/main/doc/stash/GeneralClashRule.stoverride
 
+https://raw.githubusercontent.com/liu294100/web-subscription-yaml/main/doc/stash/Spotify.stoverride
+
 ## 语法参考
 
 * 覆写文件使用 YAML 格式，文件后缀为 `.stoverride`
