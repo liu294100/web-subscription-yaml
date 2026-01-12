@@ -12,7 +12,6 @@ proxy-groups:
   type: select
   proxies:
   - "\U0001F530 手动选择"
-  - ♻️ 自动选择
   - "\U0001F3AF Direct"
   - 香港 A01
   - 香港 A02
