@@ -11,7 +11,5 @@ proxy-groups:
 - name: 🎬 BiliBiliRule
   type: select
   include-all-proxies: true
-  filter: (加拿大|台湾|德国|新加坡|日本|香港|韩国|美国|法国)
+  filter: (?i)(香港|港|hk|hongkong|hong kong|新加坡|新|sg|singapore|狮城|日本|日|jp|japan|tokyo|osaka|东京|大阪|韩国|韩|kr|korea|seoul|首尔|法国|法|fr|france|巴黎|德国|德|de|germany|berlin|柏林|英国|英|uk|gb|united kingdom|britain|伦敦|london|美国|美|us|usa|america|洛杉矶|纽约|芝加哥|加拿大|加|ca|canada|多伦多|温哥华|澳大利亚|澳|au|australia|sydney|悉尼)
 
-rules:
-- RULE-SET,BiliBili,🎬 BiliBiliRule
