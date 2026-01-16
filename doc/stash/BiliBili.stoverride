@@ -1,0 +1,17 @@
+name: BiliBili Override
+desc: 独立的 BiliBili 分流规则，包含专用的策略组
+rule-providers:
+  BiliBili:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.yaml
+    interval: 86400
+
+proxy-groups:
+- name: 🎬 BiliBiliRule
+  type: select
+  include-all-proxies: true
+  filter: (加拿大|台湾|德国|新加坡|日本|香港|韩国|美国|法国)
+
+rules:
+- RULE-SET,BiliBili,🎬 BiliBiliRule
