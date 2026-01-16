@@ -1,0 +1,93 @@
+name: TikTok Override
+desc: 独立的 TikTok 分流规则，包含专用的策略组
+rule-providers:
+  TikTok:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+    interval: 86400
+
+proxy-groups:
+- name: 🎬 TikTokRule
+  type: select
+  proxies:
+  - "🔰 手动选择"
+  - "🎯 Direct"
+  - 加拿大 A01
+  - 加拿大 A02
+  - 加拿大 A03
+  - 加拿大 A04
+  - 加拿大 A05
+  - 加拿大 A06
+  - 台湾 A01
+  - 台湾 A02
+  - 台湾 A03
+  - 台湾 A04
+  - 台湾 A05
+  - 台湾 A06
+  - 台湾 A07
+  - 台湾 A08
+  - 台湾 A09
+  - 台湾 A10
+  - 台湾 A11
+  - 台湾 A12
+  - 台湾 A13
+  - 台湾 A14
+  - 台湾 A15
+  - 台湾 A16
+  - 台湾 A17
+  - 台湾 A18
+  - 台湾 A19
+  - 台湾 A20
+  - 台湾 A21
+  - 台湾 A22
+  - 台湾 A23
+  - 台湾 A24
+  - 台湾 A25
+  - 台湾 A26
+  - 台湾 A27
+  - 台湾 A28
+  - 台湾 A29
+  - 台湾 A30
+  - 德国 A01
+  - 德国 A02
+  - 德国 A03
+  - 德国 A04
+  - 德国 A05
+  - 德国 A06
+  - 新加坡 A01
+  - 新加坡 A02
+  - 新加坡 A03
+  - 新加坡 A04
+  - 新加坡 A05
+  - 新加坡 A06
+  - 新加坡 A07
+  - 新加坡 A08
+  - 新加坡 A09
+  - 新加坡 A10
+  - 日本 A01
+  - 日本 A02
+  - 日本 A03
+  - 日本 A04
+  - 日本 A05
+  - 日本 A06
+  - 日本 A07
+  - 日本 A08
+  - 日本 A09
+  - 日本 A10
+  - 日本 A11
+  - 日本 A12
+  - 日本 A13
+  - 日本 A14
+  - 日本 A15
+  - 日本 A16
+  - 日本 A17
+  - 日本 A18
+  - 日本 A19
+  - 日本 A20
+  include-all-proxies: true
+  # 匹配所有节点，确保像参考配置那样包含各国节点
+  filter: .*
+
+rules:
+- RULE-SET,TikTok,🎬 TikTokRule

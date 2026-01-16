@@ -8,6 +8,8 @@
 
 https://raw.githubusercontent.com/liu294100/web-subscription-yaml/main/doc/stash/Spotify.stoverride
 
+https://raw.githubusercontent.com/liu294100/web-subscription-yaml/main/doc/stash/Tiktok.stoverride
+
 ## 语法参考
 
 * 覆写文件使用 YAML 格式，文件后缀为 `.stoverride`
