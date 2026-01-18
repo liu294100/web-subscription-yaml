@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { stOverrides } from '@/lib/schema';
-import { eq } from 'drizzle-orm';
+import { stOverrides, proxySources } from '@/lib/schema';
+import { eq, and } from 'drizzle-orm';
 import { isAuthenticated } from '@/lib/auth';
 
 export async function GET(req: Request, props: { params: Promise<{ id: string }> }) {
@@ -41,8 +41,40 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
     
     // Format proxies
     let proxiesList = '';
-    if (Array.isArray(override.proxies)) {
-      proxiesList = override.proxies.map(p => `  - "${p}"`).join('\n');
+    
+    // Check if override has specific proxies
+    const hasSpecificProxies = Array.isArray(override.proxies) && override.proxies.length > 0;
+    
+    if (hasSpecificProxies) {
+      // Deduplicate specific proxies
+      const uniqueProxies = Array.from(new Set(override.proxies as string[]));
+      proxiesList = uniqueProxies.map(p => `  - "${p}"`).join('\n');
+    } else {
+      // Fallback to enabled global proxy sources
+      const sources = await db.select()
+        .from(proxySources)
+        .where(eq(proxySources.isEnabled, true))
+        .orderBy(proxySources.priority, proxySources.createdAt);
+        
+      const allProxies = new Set<string>();
+      
+      for (const source of sources) {
+        const proxies = source.proxies as unknown as string[]; // Cast to string[]
+        if (Array.isArray(proxies)) {
+            proxies.forEach(p => {
+                if (p && typeof p === 'string') {
+                    allProxies.add(p.trim());
+                }
+            });
+        }
+      }
+
+      if (allProxies.size > 0) {
+        proxiesList = Array.from(allProxies).map(p => `  - "${p}"`).join('\n');
+      } else {
+        // Fallback if no globals exist? Just leave empty or add a placeholder
+        proxiesList = '  - "DIRECT"'; // Safe fallback
+      }
     }
 
     const yamlContent = `name: ${yamlName}

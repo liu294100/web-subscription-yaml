@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { toast } from 'sonner';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Switch } from '@/components/ui/switch';
 
 export default function AdminPage() {
   const [password, setPassword] = useState('');
@@ -75,6 +76,7 @@ export default function AdminPage() {
         <TabsList className="mb-4">
           <TabsTrigger value="clash">Clash YAML Manager</TabsTrigger>
           <TabsTrigger value="override">Override Generator</TabsTrigger>
+          <TabsTrigger value="proxies">Global Proxies</TabsTrigger>
         </TabsList>
         <TabsContent value="clash">
           <ClashManager password={password} />
@@ -82,12 +84,16 @@ export default function AdminPage() {
         <TabsContent value="override">
           <OverrideGenerator password={password} />
         </TabsContent>
+        <TabsContent value="proxies">
+          <GlobalProxiesManager password={password} />
+        </TabsContent>
       </Tabs>
     </div>
   );
 }
 
 function ClashManager({ password }: { password: string }) {
+  // ... existing code ...
   const [files, setFiles] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -193,7 +199,28 @@ function ClashManager({ password }: { password: string }) {
                   <TableCell>{file.filename}</TableCell>
                   <TableCell>{new Date(file.createdAt).toLocaleString()}</TableCell>
                   <TableCell>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-wrap">
+                      <Button variant="outline" size="sm" asChild>
+                        <a 
+                          href={`/api/admin/download-raw?id=${file.id}${password ? `&pwd=${password}` : ''}`} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          Raw
+                        </a>
+                      </Button>
+                      <Button 
+                        size="sm" 
+                        className="bg-green-600 hover:bg-green-700 text-white"
+                        onClick={() => {
+                          const url = `${window.location.origin}/api/admin/download-raw?id=${file.id}${password ? `&pwd=${password}` : ''}`;
+                          navigator.clipboard.writeText(url);
+                          toast.success('Raw link copied!');
+                        }}
+                      >
+                        Copy Raw
+                      </Button>
+
                       <Button variant="outline" size="sm" asChild>
                         <a 
                           href={`/api/admin/convert-stored?id=${file.id}${password ? `&pwd=${password}` : ''}`} 
@@ -203,6 +230,18 @@ function ClashManager({ password }: { password: string }) {
                           Convert
                         </a>
                       </Button>
+                      <Button 
+                        size="sm" 
+                        className="bg-green-600 hover:bg-green-700 text-white"
+                        onClick={() => {
+                          const url = `${window.location.origin}/api/admin/convert-stored?id=${file.id}${password ? `&pwd=${password}` : ''}`;
+                          navigator.clipboard.writeText(url);
+                          toast.success('Convert link copied!');
+                        }}
+                      >
+                        Copy Convert
+                      </Button>
+
                       <Button variant="destructive" size="sm" onClick={() => handleDelete(file.id)}>
                         Delete
                       </Button>
@@ -224,6 +263,7 @@ function ClashManager({ password }: { password: string }) {
 }
 
 function OverrideGenerator({ password }: { password: string }) {
+  // ... existing code ...
   const [overrides, setOverrides] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -379,8 +419,10 @@ function OverrideGenerator({ password }: { password: string }) {
                 placeholder={`"🔰 手动选择"\n"🎯 Direct"\nCanada A01`}
                 className="h-32"
                 defaultValue={editingItem?.proxies?.join('\n')}
-                required
               />
+              <p className="text-sm text-muted-foreground">
+                Leave empty to use Global Proxies.
+              </p>
             </div>
 
             <DialogFooter>
@@ -438,6 +480,237 @@ function OverrideGenerator({ password }: { password: string }) {
               {overrides.length === 0 && (
                 <TableRow>
                   <TableCell colSpan={3} className="text-center">No overrides found</TableCell>
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+function GlobalProxiesManager({ password }: { password: string }) {
+  const [sources, setSources] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<any>(null);
+
+  const fetchSources = async () => {
+    const res = await fetch('/api/admin/global-proxies', {
+      headers: { 'Authorization': `Bearer ${password}` }
+    });
+    if (res.ok) {
+      setSources(await res.json());
+    }
+  };
+
+  useEffect(() => {
+    fetchSources();
+  }, [password]);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const formData = new FormData(e.currentTarget);
+    
+    const proxiesText = formData.get('proxies') as string;
+    // Enhanced proxy parsing
+    const proxies = proxiesText.split('\n')
+      .map(line => {
+        let clean = line.trim();
+        // Remove leading dash and space (e.g., "- Proxy")
+        if (clean.startsWith('-')) {
+          clean = clean.substring(1).trim();
+        }
+        // Remove surrounding quotes if both match
+        if ((clean.startsWith('"') && clean.endsWith('"')) || (clean.startsWith("'") && clean.endsWith("'"))) {
+          clean = clean.substring(1, clean.length - 1);
+        }
+        return clean;
+      })
+      .filter(p => p);
+
+    const data = {
+      name: formData.get('name'),
+      proxies,
+      priority: formData.get('priority'),
+      id: editingItem?.id
+    };
+
+    const method = editingItem ? 'PUT' : 'POST';
+    const res = await fetch('/api/admin/global-proxies', {
+      method,
+      body: JSON.stringify(data),
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${password}`
+      },
+    });
+
+    if (res.ok) {
+      toast.success(editingItem ? 'Source updated' : 'Source added');
+      fetchSources();
+      setIsDialogOpen(false);
+      setEditingItem(null);
+    } else {
+      toast.error('Failed to save source');
+    }
+    setLoading(false);
+  };
+
+  const handleToggle = async (id: number, current: boolean) => {
+    const res = await fetch('/api/admin/global-proxies', {
+      method: 'PUT',
+      body: JSON.stringify({ id, isEnabled: !current }),
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${password}`
+      },
+    });
+
+    if (res.ok) {
+      setSources(sources.map(p => p.id === id ? { ...p, isEnabled: !current } : p));
+    } else {
+      toast.error('Failed to update status');
+    }
+  };
+
+  const handleDelete = async (id: number) => {
+    if (!confirm('Delete this source?')) return;
+    const res = await fetch(`/api/admin/global-proxies?id=${id}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': `Bearer ${password}` }
+    });
+
+    if (res.ok) {
+      setSources(sources.filter(p => p.id !== id));
+      toast.success('Source deleted');
+    } else {
+      toast.error('Failed to delete source');
+    }
+  };
+
+  const openEdit = (item: any) => {
+    setEditingItem(item);
+    setIsDialogOpen(true);
+  };
+
+  const openCreate = () => {
+    setEditingItem(null);
+    setIsDialogOpen(true);
+  };
+
+  const getProxyCount = (proxies: any) => {
+    if (Array.isArray(proxies)) return proxies.length;
+    if (typeof proxies === 'string') return proxies.split('\n').filter(line => line.trim()).length;
+    return 0;
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="flex justify-between items-center">
+        <h2 className="text-xl font-semibold">Proxy Sources</h2>
+        <Button onClick={openCreate}>Add New Source</Button>
+      </div>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>{editingItem ? 'Edit Source' : 'Add New Source'}</DialogTitle>
+            <DialogDescription>
+              Manage a collection of proxies as a single source. Lower priority number means higher priority.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-3 gap-4">
+                <div className="col-span-2 space-y-2">
+                  <Label htmlFor="name">Source Name</Label>
+                  <Input 
+                    id="name" 
+                    name="name" 
+                    placeholder="e.g. Premium Node List" 
+                    defaultValue={editingItem?.name}
+                    required 
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="priority">Priority</Label>
+                  <Input 
+                    id="priority" 
+                    name="priority" 
+                    type="number"
+                    placeholder="0" 
+                    defaultValue={editingItem?.priority ?? 0}
+                    required 
+                  />
+                </div>
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="proxies">Node List (One per line)</Label>
+              <Textarea 
+                id="proxies" 
+                name="proxies" 
+                placeholder={`"🔰 手动选择"\n"🎯 Direct"\nCanada A01`}
+                className="h-64"
+                defaultValue={Array.isArray(editingItem?.proxies) ? editingItem.proxies.join('\n') : editingItem?.proxies}
+                required
+              />
+            </div>
+
+            <DialogFooter>
+              <Button type="submit" disabled={loading}>
+                {loading ? 'Saving...' : (editingItem ? 'Update Source' : 'Add Source')}
+              </Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Manage Global Sources</CardTitle>
+          <CardDescription>These sources will be used when an override has no specific nodes configured.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Priority</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Count</TableHead>
+                <TableHead>Enabled</TableHead>
+                <TableHead>Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {sources.map((source) => (
+                <TableRow key={source.id}>
+                  <TableCell>{source.priority}</TableCell>
+                  <TableCell className="font-medium">{source.name}</TableCell>
+                  <TableCell>{getProxyCount(source.proxies)} nodes</TableCell>
+                  <TableCell>
+                    <Switch 
+                      checked={source.isEnabled} 
+                      onCheckedChange={() => handleToggle(source.id, source.isEnabled)}
+                    />
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex gap-2">
+                      <Button variant="outline" size="sm" onClick={() => openEdit(source)}>
+                        Edit
+                      </Button>
+                      <Button variant="destructive" size="sm" onClick={() => handleDelete(source.id)}>
+                        Delete
+                      </Button>
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ))}
+              {sources.length === 0 && (
+                <TableRow>
+                  <TableCell colSpan={5} className="text-center">No sources found</TableCell>
                 </TableRow>
               )}
             </TableBody>
