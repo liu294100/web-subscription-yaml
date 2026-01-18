@@ -42,6 +42,30 @@ export async function GET(req: Request) {
   }
 }
 
+export async function PUT(req: Request) {
+  if (!isAuthenticated(req)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const { id, content } = await req.json();
+
+    if (!id || !content) {
+      return NextResponse.json({ error: 'ID and content are required' }, { status: 400 });
+    }
+
+    const result = await db.update(clashYamls)
+      .set({ content })
+      .where(eq(clashYamls.id, parseInt(id)))
+      .returning();
+
+    return NextResponse.json(result[0]);
+  } catch (error) {
+    console.error('Error updating clash yaml:', error);
+    return NextResponse.json({ error: 'Failed to update file' }, { status: 500 });
+  }
+}
+
 export async function DELETE(req: Request) {
   if (!isAuthenticated(req)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

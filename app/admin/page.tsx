@@ -96,6 +96,8 @@ function ClashManager({ password }: { password: string }) {
   // ... existing code ...
   const [files, setFiles] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<any>(null);
 
   const fetchFiles = async () => {
     const res = await fetch('/api/admin/upload-clash', {
@@ -160,8 +162,75 @@ function ClashManager({ password }: { password: string }) {
     }
   };
 
+  const handleUpdate = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const formData = new FormData(e.currentTarget);
+    const file = formData.get('file') as File;
+    
+    let content = '';
+    if (file && file.size > 0) {
+        content = await file.text();
+    } else {
+        // Fallback to text area if needed, but per request we use upload
+        // content = formData.get('content') as string;
+        toast.error('Please select a file to update');
+        setLoading(false);
+        return;
+    }
+    
+    const res = await fetch('/api/admin/upload-clash', {
+      method: 'PUT',
+      body: JSON.stringify({
+        id: editingItem.id,
+        content,
+      }),
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${password}`
+      },
+    });
+
+    if (res.ok) {
+      toast.success('File updated successfully');
+      fetchFiles();
+      setIsDialogOpen(false);
+      setEditingItem(null);
+    } else {
+      toast.error('Failed to update file');
+    }
+    setLoading(false);
+  };
+
+  const openEdit = (file: any) => {
+    setEditingItem(file);
+    setIsDialogOpen(true);
+  };
+
   return (
     <div className="space-y-6">
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Update Clash YAML</DialogTitle>
+            <DialogDescription>
+              Upload a new file to replace the content of <strong>{editingItem?.filename}</strong>.
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleUpdate} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="update-file">Select New YAML File</Label>
+              <Input id="update-file" name="file" type="file" accept=".yaml,.yml" required />
+            </div>
+            <DialogFooter>
+              <Button type="submit" disabled={loading}>
+                {loading ? 'Updating...' : 'Update File'}
+              </Button>
+            </DialogFooter>
+          </form>
+        </DialogContent>
+      </Dialog>
+
       <Card>
         <CardHeader>
           <CardTitle>Upload Clash YAML</CardTitle>
@@ -240,6 +309,10 @@ function ClashManager({ password }: { password: string }) {
                         }}
                       >
                         Copy Convert
+                      </Button>
+
+                      <Button variant="outline" size="sm" onClick={() => openEdit(file)}>
+                        Update
                       </Button>
 
                       <Button variant="destructive" size="sm" onClick={() => handleDelete(file.id)}>
